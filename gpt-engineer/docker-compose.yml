@@ -1,0 +1,40 @@
+version: "3"
+
+services:
+
+  generate-order:
+    tty: true
+    stdin_open: true
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    image: ghcr.io/jinyoung/gpt-engineer:v5
+#    command: ["-sh"]
+    volumes:
+      - ../order:/project
+  generate-process order:
+    tty: true
+    stdin_open: true
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    image: ghcr.io/jinyoung/gpt-engineer:v5
+#    command: ["-sh"]
+    volumes:
+      - ../process order:/project
+  generate-rider:
+    tty: true
+    stdin_open: true
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    image: ghcr.io/jinyoung/gpt-engineer:v5
+#    command: ["-sh"]
+    volumes:
+      - ../rider:/project
+  generate-dashboard:
+    tty: true
+    stdin_open: true
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    image: ghcr.io/jinyoung/gpt-engineer:v5
+#    command: ["-sh"]
+    volumes:
+      - ../dashboard:/project
